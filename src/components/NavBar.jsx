@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '@restart/ui/esm/Button';
-import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import CartWidget from './CartWidget';
 
 const NavBar = () => {
   return (
@@ -14,9 +14,12 @@ const NavBar = () => {
           <Nav.Link href="#products">Products</Nav.Link>
           <Nav.Link href="#shipments">Shipments</Nav.Link>
           <Nav.Link href="#contact">Contact</Nav.Link>
+          <Nav.Link href="#cart"><CartWidget /></Nav.Link>
         </Nav>
+        
       </Navbar.Collapse>
       </Container>
+      
     </Navbar>
   );
 };
