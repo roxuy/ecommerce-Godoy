@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import CartWidget from './CartWidget';
-
+//import imagen from '../assets/img/plants4.jpg'
 const NavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -15,8 +15,7 @@ const NavBar = () => {
           <Nav.Link href="#shipments">Shipments</Nav.Link>
           <Nav.Link href="#contact">Contact</Nav.Link>
           <Nav.Link href="#cart"><CartWidget /></Nav.Link>
-        </Nav>
-        
+        </Nav>  
       </Navbar.Collapse>
       </Container>
       
