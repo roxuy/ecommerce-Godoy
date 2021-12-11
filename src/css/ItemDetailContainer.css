@@ -1,0 +1,29 @@
+/* #main {
+    background: linear-gradient(rgba(255, 255, 255, 0.719), rgba(255,255,255,.2)), url('../assets/img/plants4.jpg'); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.itemcontainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.itempcontainer {
+    /* display: flex;
+    flex-direction: row;
+    gap: 10px; */
+    
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+}
+
+.item-img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    }
+

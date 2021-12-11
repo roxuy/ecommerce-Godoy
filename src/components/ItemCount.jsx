@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState} from "react";
 import { Button } from "react-bootstrap";
-
+import '../css/ItemCount.css'
 
 function ItemCount ({ stock, initial, onAdd }){
     const [quantity, setQuantity] = useState(initial);
@@ -14,11 +14,12 @@ function ItemCount ({ stock, initial, onAdd }){
     }
 
     return (
-    <div>
+    <div className="cartcontainer">
         <Button variant="dark" onClick={()=>onAdd(1)}> + </Button>    
-        <input size="5" value ={quantity} />
+        <p>{quantity} </p>
         <Button variant="dark" onClick={()=>onAdd(-1)}> - </Button>
     </div>)
 }
 
 export default ItemCount;
+//<input size="5" value ={quantity} />
