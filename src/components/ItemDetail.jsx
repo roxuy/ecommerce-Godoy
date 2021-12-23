@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Card, Button } from "react-bootstrap";
 import ItemCount from './ItemCount';
 
 export default function ItemDetail({item}) {
+    const [state, setState] = useState();
+    function onAdd(){
+        // 
+        console.log('llega un onAdd de itemDetail');
+        //setState(state + parseInt(quantitytoAdd));
+    }
     return (
         <div className="itemcontainer">
            <div className="text-center" style={{ width: '25rem' }}>

@@ -3,7 +3,7 @@ import { useState} from "react";
 import { Button } from "react-bootstrap";
 import '../css/ItemCount.css'
 
-function ItemCount ({ stock, initial, onAdd }){
+function ItemCount ({ stock, initial}){
     const [quantity, setQuantity] = useState(initial);
     function onAdd (value) {
         if (value>0 && quantity+1<=stock){
@@ -22,4 +22,3 @@ function ItemCount ({ stock, initial, onAdd }){
 }
 
 export default ItemCount;
-//<input size="5" value ={quantity} />
