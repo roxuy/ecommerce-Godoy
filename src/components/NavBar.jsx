@@ -1,15 +1,15 @@
 import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
-//import imagen from '../assets/img/plants4.jpg'
+
 const NavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
       <Navbar.Brand >
         <NavLink to="/">Jacaranda plants</NavLink>
-        </Navbar.Brand>
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="text-center">

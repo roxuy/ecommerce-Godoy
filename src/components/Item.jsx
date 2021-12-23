@@ -1,11 +1,10 @@
 import React from 'react'
 import { Card, Button } from "react-bootstrap";
 import { Link } from 'react-router-dom';
-//id, title, description, price, pictureUrl 
+import '../css/Item.css'
 const Item = ({key,item}) => {
-return (
-        <Link to={`/item/${item.id}`}>
-            <Card className="text-center" style={{ width: '18rem' }}>
+return ( <Link to={`/item/${item.id}`}>
+        <Card className="text-center" style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={item.pictureUrl} className='card-img' />
                 <Card.Body>
                     <Card.Title>{item.title}</Card.Title>
@@ -17,7 +16,7 @@ return (
                     </Button>
                 </Card.Body>
             </Card>
-        </Link>    
+            </Link> 
         )};
         
 export default Item;
