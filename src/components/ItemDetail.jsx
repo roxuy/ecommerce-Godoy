@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
 import { Card, Button } from "react-bootstrap";
 import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom'
 
 export default function ItemDetail({item}) {
-    const [state, setState] = useState();
-    function onAdd(){
-        // 
-        console.log('llega un onAdd de itemDetail');
-        //setState(state + parseInt(quantitytoAdd));
+    let stock=5;
+    let initial=1;
+    const [quantity, setQuantity] = useState(initial);
+    function onAdd (value) {
+        if (value>0 && quantity+1<=stock){
+            setQuantity(parseInt(quantity) + parseInt(value));
+        } else if (value<0 && quantity>=1){
+            setQuantity(parseInt(quantity) + parseInt(value));
+        }
     }
+    
     return (
         <div className="itemcontainer">
            <div className="text-center" style={{ width: '25rem' }}>
@@ -23,9 +29,9 @@ export default function ItemDetail({item}) {
                     <Card.Text>
                         {item.description}
                     </Card.Text>
-                    <ItemCount stock="5" initial="1"/>
+                    <ItemCount onAdd={onAdd} quantity={quantity}/>
                     <Button variant="secondary" size="lg">
-                        Add cart
+                        <Link to="/Cart" className="text-white">Add cart</Link>
                     </Button>
                 </Card.Body>
             </div> 
